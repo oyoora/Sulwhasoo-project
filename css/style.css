@@ -1,0 +1,82 @@
+@charset "utf-8";
+
+header .left {
+  float: left;
+  padding: 43px 0 0 78px;
+}
+/*pc버전에서 필요한것만 보이게*/
+header .all,
+header h2,
+header .close,
+header > .left > div > div {
+  display: none;
+}
+header h1 {
+  float: left;
+  padding: 0 108px 0 0;
+}
+header h1 a {
+  display: block;
+  width: 132px;
+  height: 50px;
+  background: url(../images/logo.png) no-repeat;
+  background-size: contain;
+}
+header nav a {
+  display: block;
+  height: 50px;
+  line-height: 50px;
+  font-size: 17px;
+  font-weight: bold;
+  position: relative;
+}
+header nav a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 15px;
+  width: 0%;
+  height: 2px;
+  background: black;
+}
+header nav a:hover::before {
+  width: 100%;
+  transition: all 0.3s;
+}
+header .left > div {
+  float: left;
+}
+header .left > div > nav > ul > li {
+  float: left;
+  padding: 0 30px 0 0;
+}
+header > ul {
+  float: right;
+  padding: 51px 40px 0 0;
+}
+header > ul li {
+  float: left;
+  margin-left: -1px;
+}
+header > ul li:first-child a {
+  border-radius: 3px 0 0 3px;
+}
+header > ul li:nth-child(2) a {
+  border-radius: 0 3px 3px 0;
+}
+header > ul li a {
+  display: block;
+  width: 96px;
+  height: 38px;
+  line-height: 38px;
+  text-align: center;
+  font-size: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 3px;
+}
+header > ul li.join {
+  padding: 0 0 0 10px;
+}
+header > ul li.join a {
+  background-color: rgba(235, 234, 234, 0.8);
+}

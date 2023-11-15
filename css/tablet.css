@@ -1,0 +1,141 @@
+@charset "utf-8";
+header h1 {
+  float: none;
+  padding: 0;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 35px;
+}
+header .left {
+  padding: 49px 0 0 38px;
+}
+header .all {
+  display: block;
+  width: 32px;
+  height: 14px;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  position: relative;
+  color: transparent;
+}
+header .all::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  height: 2px;
+  background: black;
+  margin-top: -0.5px;
+}
+header .left > div {
+  float: none;
+}
+header > ul {
+  padding: 40px 40px 0 0;
+}
+header > ul li a {
+  width: 70px;
+}
+
+/*mobile version*/
+header .nav {
+  position: absolute;
+  left: -120%;
+  top: 0;
+  transition: left 0.5s;
+  z-index: 101;
+}
+header .nav.on {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: calc(100% - 32px);
+  height: 100%;
+  background: #ffffff;
+  padding: 15px 24px 15px 22px;
+  box-sizing: border-box;
+}
+header .nav.on nav {
+  border-top: 1px solid black;
+  padding: 0 0 24px 0;
+}
+header .nav.on nav li {
+  float: none;
+  border-bottom: 1px solid rgb(146, 146, 146);
+}
+header .nav.on nav li a {
+  height: 40px;
+  line-height: 40px;
+}
+header .nav.on nav li a::before {
+  display: none;
+}
+header .nav.on div {
+  display: flex;
+  border: 1px solid black;
+}
+header .nav.on div a {
+  flex: 1;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  height: 38px;
+  line-height: 38px;
+  border-left: 1px solid black;
+}
+header .nav.on div a:first-child {
+  border: none;
+}
+header .all,
+header h2,
+header .close,
+header > .left > div > div {
+  display: block;
+}
+header h2 {
+  background: url(../images/logo.png) no-repeat;
+  width: 132px;
+  height: 50px;
+  background-size: contain;
+  margin: 0 0 75px 0;
+}
+header .nav.on .close {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  right: 24px;
+  top: 24px;
+  color: transparent;
+}
+header .nav.on .close::before {
+  content: "";
+  width: 1px;
+  height: 100%;
+  background: black;
+  position: absolute;
+  left: 46.5%;
+  top: 0;
+  transform: rotate(45deg);
+}
+header .nav.on .close::after {
+  content: "";
+  width: 1px;
+  height: 100%;
+  background: black;
+  position: absolute;
+  right: 46.5%;
+  top: 0;
+  transform: rotate(-45deg);
+}
+.dim {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+  display: none;
+}
