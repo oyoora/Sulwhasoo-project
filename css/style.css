@@ -1,8 +1,15 @@
 @charset "utf-8";
 
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+}
+/*--header--*/
 header .left {
   float: left;
-  padding: 43px 0 0 78px;
+  padding: 15px 0 0 78px;
 }
 /*pc버전에서 필요한것만 보이게*/
 header .all,
@@ -52,7 +59,7 @@ header .left > div > nav > ul > li {
 }
 header > ul {
   float: right;
-  padding: 51px 40px 0 0;
+  padding: 20px 40px 0 0;
 }
 header > ul li {
   float: left;
@@ -79,4 +86,21 @@ header > ul li.join {
 }
 header > ul li.join a {
   background-color: rgba(235, 234, 234, 0.8);
+}
+/*--header end--*/
+
+/*main_video*/
+.scene {
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+.full-bg {
+  position: absolute;
+}
+.full-bg video {
+  position: absolute;
+  height: 100%;
+  width: 100%;
 }
