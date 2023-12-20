@@ -5,6 +5,7 @@ html {
 }
 body {
   height: 100%;
+  overflow-x: hidden;
 }
 /*--header--*/
 header .left {
@@ -103,4 +104,178 @@ header > ul li.join a {
   position: absolute;
   height: 100%;
   width: 100%;
+}
+
+/*grid layout*/
+article h2 {
+  font-size: 30px;
+  margin: 0;
+  color: #333;
+}
+article {
+  flex: 1; /*article의 공간을 꽉채워줌*/
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 15px;
+}
+article p {
+  flex: 1;
+}
+.card p {
+  font-size: 20px;
+  font-weight: bold;
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 2em 0 0 0;
+}
+
+.main_title {
+  text-align: center;
+  width: 300px;
+  margin: 0 auto;
+  font-size: 2em;
+  font-weight: bold;
+  padding: 60px 0 60px 0;
+}
+.band {
+  width: 70%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-gap: 20px;
+}
+.thumb1 {
+  padding-bottom: 80%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.thumb {
+  width: 100%;
+  padding-bottom: 80%;
+  background-size: cover;
+  background-position: center;
+}
+.card {
+  display: flex;
+  background: #ffffff;
+  color: #444;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  flex-direction: column;
+  position: relative;
+  top: 0;
+  transition: 0.2s;
+}
+.card:hover {
+  top: -2px;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+}
+@media (max-width: 749px) {
+  .container {
+    width: 100% !important;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+  .slide_wrapper {
+    width: 100% !important;
+  }
+}
+@media screen and (min-width: 750px) {
+  .band {
+    grid-template-columns: 1fr 1fr;
+  }
+  .item-1 {
+    grid-column: 1/3;
+  }
+}
+@media screen and (min-width: 850px) {
+  .band {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .thumb1 {
+    padding-bottom: 50%;
+  }
+}
+/*javascript slide */
+.slides .lists {
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: cover !important;
+}
+.slides .list1 {
+  background: url(../images/list1.jpg);
+}
+.slides .list2 {
+  background: url(../images/list2.jpg);
+}
+.slides .list3 {
+  background: url(../images/list3.jpg);
+}
+.slides .list4 {
+  background: url(../images/list4.jpg);
+}
+.slides .list5 {
+  background: url(../images/list5.jpg);
+}
+.container {
+  width: 1150px;
+  margin: 0 auto;
+}
+.slide_wrapper {
+  position: relative;
+  width: 1110px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding-top: 200px;
+  height: 270px;
+}
+.slides {
+  width: 100%;
+  height: 460px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.slides.animated {
+  transition: 0.5s ease-out;
+}
+.slides li {
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  background: #ccc;
+}
+.slides li img {
+  max-width: 100%;
+}
+.slides li:not(:last-child) {
+  margin-right: 30px;
+}
+.controls {
+  text-align: center;
+  margin-top: -150px;
+  line-height: 50px;
+  display: flex;
+  justify-content: center;
+}
+.controls span {
+  position: relative;
+  top: 350px;
+  display: block;
+  background-color: black;
+  color: white;
+  width: 100px;
+  height: 50px;
+  font-size: 18px;
+  cursor: pointer;
+}
+.controls span:not(:last-child) {
+  margin-right: 50px;
+}
+.title2 {
+  padding: 100px 0 60px 0;
 }
